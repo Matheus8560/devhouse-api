@@ -8,13 +8,10 @@ class App {
 	constructor() {
 		this.server = express();
 
-		mongose.connect(
-			'mongodb+srv://devhouse:devhouse@devhouse.l1eem.mongodb.net/devhouse?retryWrites=true&w=majority',
-			{
-				useNewUrlParser: true,
-				useUnifiedTopology: true,
-			}
-		);
+		mongose.connect('Sua string de conexão do MongoDB', {
+			useNewUrlParser: true,
+			useUnifiedTopology: true,
+		});
 
 		this.middlewares();
 		this.routes();
